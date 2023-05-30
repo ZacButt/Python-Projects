@@ -78,9 +78,10 @@ class ParentWindow(Frame):
         
         #Runs through each file in the source directory
         for i in source_files:
+            file_path = os.path.join(source, i)
             #moves each file from the source to the destination
-            shutil.move(source + '/' + i, destination)
-            print(i + ' was successfully transferred.')
+            #shutil.move(source + '/' + i, destination)
+            #print(i + ' was successfully transferred.')
             #Get the modification timestamp of the file
             file_timestamp= datetime.fromtimestamp(os.path.getmtime())
 
