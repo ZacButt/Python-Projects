@@ -83,7 +83,7 @@ class ParentWindow(Frame):
             #shutil.move(source + '/' + i, destination)
             #print(i + ' was successfully transferred.')
             #Get the modification timestamp of the file
-            file_timestamp= datetime.fromtimestamp(os.path.getmtime())
+            file_timestamp= datetime.fromtimestamp(os.path.getmtime(file_path))
 
             # Calculate the time difference between the current time and file timestamp
             time_difference = current_time - file_timestamp
